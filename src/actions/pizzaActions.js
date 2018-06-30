@@ -1,32 +1,34 @@
+
 export const ADD_BASE = "ADD_BASE"
-export const ADD_SAUSE = "ADD_SAUSE"
+export const ADD_SAUCE = "ADD_SAUCE"
 export const ADD_TOPPING = "ADD_TOPPING"
 export const DELIVERY_METHOD = "DELIVERY_METHOD"
 
-export function addBase(base) {
-  return {
-    type: 'ADD_BASE',
-    payload: base
-  }
+export function addBase(id, price) {
+	return {
+		type: 'ADD_BASE',
+		payload: { id, price }
+	}
 }
 
-export function addSause(sauce) {
-  return {
-    type: 'ADD_SAUSE',
-    payload: sauce
-  }
+export function addSauce(id, price) {
+	return {
+		type: 'ADD_SAUCE',
+		payload: { id, price }
+	}
 }
 
-export function addTopping(topping) {
-  return {
-    type: 'ADD_TOPPING',
-    payload: topping
-  }
+export function addTopping(id, price) {
+	return {
+		type: 'ADD_TOPPING',
+		payload: { id, price }
+	}
 }
 
-export function delivery(method) {
-  return {
-    type: 'DELIVERY_METHOD',
-    payload: method
-  }
+export function delivery(id, price) {
+	return {
+		type: 'DELIVERY_METHOD',
+		payload: { id, price }
+	}
 }
+

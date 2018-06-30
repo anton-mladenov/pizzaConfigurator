@@ -1,103 +1,118 @@
 
 // Pizza Bases Options
 
-export const base20 = {
+export const pizzaBases = [
+	{
+	id: 1,
 	name: "NY Style",
 	size: 20,
 	price: 6.45,
-}
-
-export const base25 = {
+	}, 
+	{
+	id: 2,
 	name: "NY Style",
 	size: 25,
 	price: 8.99,
-}
-
-export const base30 = {
+	},
+	{
+	id: 3,
 	name: "NY Style",
 	size: 30,
 	price: 11.49,
-}
-
-export const base35 = {
+	},
+	{
+	id: 4,
 	name: "NY Style",
 	size: 35,
 	price: 13.49,
-}
+	}
+]
 
 // Pizza Sauce Options
 
-export const sauceWhite = {
+export const pizzaSauces = [
+	{
+	id: 1,
 	name: "White Sauce",
 	price: 0
-}
-
-export const sauceRed = {
+	},
+	{
+	id: 2,	
 	name: "Red Sauce",
 	price: 0
-}
-
-export const sauceRedDouble = {
+	},
+	{
+	id: 3,
 	name: "Double Red Sauce",
 	price: 1
-}
-
-export const sauceMixed = {
+	},
+	{
+	id: 4,
 	name: "Mixed Sauce",
 	price: 1.5
-}
+	}
+]
 
 // Pizza Extra Options
 
-export const pineapple = {
+export const pizzaToppings = [
+	{
+	id: 1,
 	name: "Pineapple",
 	price: 0.5
-}
-
-export const corn = {
+	},
+	{
+	id: 2,
 	name: "Corn",
 	price: 0.5
-}
-
-export const greenOlives = {
+	},
+	{
+	id: 3,
 	name: "Green Olives",
 	price: 0.5
-}
-
-export const redOnion = {
+	},
+	{
+	id: 4,
 	name: "Red Onion",
 	price: 0.5
-}
-
-export const spinach = {
+	},
+	{
+	id: 5,
 	name: "Spinach",
 	price: 0.5
-}
-
-export const cherryTomatoes = {
+	},
+	{
+	id: 6,
 	name: "Cherry Tomatoes",
 	price: 0.5
-}
-
-export const chicken = {
+	},
+	{
+	id: 7,
 	name: "Chicken",
 	price: 0.5
-}
+	}
+]
 
 // Pizza Delivery Options
 
-export const deliveryCost = (deliveryMethod, pizzaTotalPrice) => {
-	if (deliveryMethod === "Turbo Drone Delivery") {
-		const finalPrice = (pizzaTotalPrice * 0.1) + pizzaTotalPrice
-		return finalPrice
-	} else {
-		return pizzaTotalPrice
+export const pizzaDeliveryMethods = [
+	{
+	id: 1,
+	name: "Standard Delivery",
+	percentageOfBill: 0
+	},
+	{
+	id: 2,
+	name: "Turbo Drone Delivery",
+	percentageOfBill: 0.1
 	}
-}
+]
 
-// const initialState = {
-// 	base: base25,
-// 	sause: [sauceRed],
-// 	topping: [redOnion, greenOlives]
+// export const deliveryCost = (deliveryMethod, pizzaTotalPrice) => {
+// 	if (deliveryMethod === "") {
+// 		const finalPrice = (pizzaTotalPrice * 0.1) + pizzaTotalPrice
+// 		return finalPrice
+// 	} else {
+// 		return pizzaTotalPrice
+// 	}
 // }
-// console.log(initialState);
