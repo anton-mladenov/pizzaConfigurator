@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { pizzaSauces } from "../pizzaDB"
-import { addSauce } from "../actions/pizzaActions"
+import { addSauce, calcPrice } from "../actions/pizzaActions"
 import { connect } from "react-redux"
 
 class PizzaSauce extends Component {
@@ -28,6 +28,7 @@ class PizzaSauce extends Component {
 		let id = Number(this.state.value)
 		let price = Number(this.state.price)
 		this.props.addSauce(id, price)
+		this.props.calcPrice()
 	}
 
 	showPizzaSauces = () => {
@@ -40,7 +41,7 @@ class PizzaSauce extends Component {
 		<div>
 			<form onSubmit={this.handleSubmit}>
 				<label>
-				Choose Sauces:
+				Choose A Sauce:
 					<select value={this.state.value} onChange={this.handleChange}>
 						{this.showPizzaSauces()}
 					</select>
@@ -52,4 +53,4 @@ class PizzaSauce extends Component {
 	}
 }
 
-export default connect(null, { addSauce })( PizzaSauce )
+export default connect(null, { addSauce, calcPrice })( PizzaSauce )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { pizzaBases } from "../pizzaDB"
-import { addBase } from "../actions/pizzaActions"
+import { addBase, calcPrice } from "../actions/pizzaActions"
 import { connect } from "react-redux"
 
 class PizzaBase extends Component {
@@ -28,6 +28,7 @@ class PizzaBase extends Component {
 		let id = Number(this.state.value)
 		let price = Number(this.state.price)
 		this.props.addBase(id, price)
+		this.props.calcPrice()
 	}
 
 	showPizzaBases = () => {
@@ -52,7 +53,7 @@ class PizzaBase extends Component {
 	}
 }
 
-export default connect(null, { addBase })( PizzaBase )
+export default connect(null, { addBase, calcPrice })( PizzaBase )
 
 // export default class PizzaBase extends Component {
 // 	state = {

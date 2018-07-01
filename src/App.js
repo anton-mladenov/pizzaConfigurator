@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import PizzaBaseContainer from "./components/PizzaBaseContainer"
 import PizzaBase from "./components/PizzaBase"
 import PizzaSauce from "./components/PizzaSauce"
 import PizzaTopping from "./components/PizzaTopping"
@@ -16,7 +15,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        {/* <PizzaBaseContainer /> */}
 		<PizzaBase />
 		<PizzaSauce />
 		<PizzaTopping />
