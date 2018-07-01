@@ -108,11 +108,3 @@ export const pizzaDeliveryMethods = [
 	}
 ]
 
-// export const deliveryCost = (deliveryMethod, pizzaTotalPrice) => {
-// 	if (deliveryMethod === "") {
-// 		const finalPrice = (pizzaTotalPrice * 0.1) + pizzaTotalPrice
-// 		return finalPrice
-// 	} else {
-// 		return pizzaTotalPrice
-// 	}
-// }

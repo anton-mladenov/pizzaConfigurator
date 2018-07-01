@@ -5,10 +5,6 @@ export const ADD_TOPPING = "ADD_TOPPING"
 export const DELIVERY_METHOD = "DELIVERY_METHOD"
 
 export const SEND_PRICES = "SEND_PRICES"
-export const BASE_PRICES = "BASE_PRICES"
-export const SAUCE_PRICES = "SAUCE_PRICES"
-export const TOPPING_PRICES = "TOPPING_PRICES"
-export const DELIVERY_PERCENT = "DELIVERY_PERCENT"
 
 export function addBase(id, price) {
 	return {
@@ -46,8 +42,6 @@ export const calcPrice = () => (dispatch, getState) => {
 	const toppingPrice = state.pizzaTopping
 		.map(top => top.price)
 		.reduce((total, num) => { return total + num } , 0)
-	
-	// const baseSauceTopping = [basePrice, saucePrice, toppingPrice]
 
 	const deliveryPercent = state.pizzaDelivery.percentageOfBill
 
@@ -60,8 +54,3 @@ export const calcPrice = () => (dispatch, getState) => {
 	})
 
 }
-
-// BASE_PRICES
-// SAUCE_PRICES
-// TOPPING_PRICES
-// DELIVERY_PERCENT

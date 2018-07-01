@@ -41,7 +41,7 @@ class PizzaTopping extends Component {
 		<div>
 			<form onSubmit={this.handleSubmit}>
 				<label>
-				Choose Toppings:
+				Choose Toppings (max. 3):
 					<select value={this.state.value} onChange={this.handleChange}>
 						{this.showPizzaToppings()}
 					</select>
