@@ -1,23 +1,23 @@
-// import React, { Component } from 'react'
-// import { connect } from "react-redux"
+import React, { Component } from 'react'
+import { connect } from "react-redux"
 
-// class PizzaPrice extends Component {
+class PizzaPrice extends Component {
 	
 	
 	
-// 	render() {
-// 		return (
-// 		<div>
-// 			<h1> {this.props.price} </h1>
-// 		</div>
-// 		)
-// 	}
-// }
+	render() {
+		return (
+		<div>
+			<h1> {this.props.price} </h1>
+		</div>
+		)
+	}
+}
 
-// const mapStateToProps = (state) => {
-// 	return {
-// 		price: state.pizzaPrice
-// 	}
-// }
+const mapStateToProps = (state) => {
+	return {
+		price: state.pizzaPrice
+	}
+}
 
-// export default connect(null, {  })( PizzaPrice )
+export default connect(mapStateToProps, {  })( PizzaPrice )

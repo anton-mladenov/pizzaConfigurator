@@ -5,7 +5,7 @@ import PizzaBase from "./components/PizzaBase"
 import PizzaSauce from "./components/PizzaSauce"
 import PizzaTopping from "./components/PizzaTopping"
 import PizzaDelivery from "./components/PizzaDelivery"
-// import PizzaPrice from "./components/PizzaPrice"
+import PizzaPrice from "./components/PizzaPrice"
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
 		<PizzaSauce />
 		<PizzaTopping />
 		<PizzaDelivery />
-		{/* <PizzaPrice /> */}
+		<PizzaPrice />
       </div>
     );
   }
